@@ -14,7 +14,7 @@ function Header() {
           src="https://assets.website-files.com/6077c884c3e246204e5f48d8/6077cccf4baced83a073cc5e_GLH-logo-Dark.svg" 
           alt="logo" 
           width={100}
-          height={50}
+          height={40}
         />
       </div>
       <div className="block lg:hidden">
