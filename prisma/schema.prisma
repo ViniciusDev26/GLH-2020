@@ -14,19 +14,32 @@ model Provider {
   id        String @id @default(uuid())
   name      String
   cnpj      String @unique
-  addressId String
-
+  email     String @unique
+  phone     String
+  addressId String @unique
 
   address Address @relation(fields: [addressId], references: [id])
   @@map("providers")
 }
 
+model Representative {
+  id    String @id @default(uuid())
+  name  String
+  cpf   String @unique
+  rg    String @unique
+  email String @unique
+
+  @@map("representative")
+}
+
 model Address {
-  id          String     @id @default(uuid())
+  id          String @id @default(uuid())
   street      String
   number      Int
   complement  String
   postal_code String
+
+  Provider Provider?
   
-  Provider    Provider[]
+  @@map("address")
 }

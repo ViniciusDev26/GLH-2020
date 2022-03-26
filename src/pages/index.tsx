@@ -24,9 +24,12 @@ const Home: NextPage<THomeProps> = ({providers}) => {
       <h2 className="font-bold underline">Listagem de fornecedores</h2>
       <ul>
         {providers?.map(provider => (
-          <li key={provider.id}>{provider.name}</li>
+          <li key={provider.id}>{provider.name} - {provider.cnpj}</li>
         ))}
       </ul>
+      <button className="bg-dark hover:white text-white hover:text-black font-bold py-2 px-4 rounded">
+        Button
+      </button>
     </>
   )
 }
