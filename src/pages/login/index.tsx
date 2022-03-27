@@ -19,7 +19,7 @@ const Login = () => {
       <h2>Login</h2>
       <div>
         <input type="email" placeholder='E-mail'/>
-        <input type="password" placeholder='E-mail'/>
+        <input type="password" placeholder='Password'/>
         <button onClick={() => router.push('/contracts')}>Logar</button>
       </div>
     </StyledContainer>

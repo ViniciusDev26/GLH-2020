@@ -4,7 +4,8 @@ const nextConfig = {
   images: {
     domains: ['assets.website-files.com'],
   },
-  styledComponents: true
+  styledComponents: true,
+  pageExtensions: ['tsx'],
 }
 
 module.exports = nextConfig
