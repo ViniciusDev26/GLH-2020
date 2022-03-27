@@ -50,6 +50,12 @@ function Header() {
           Fornecedores
         </a>
       </Link>
+
+      <Link href="/faq" passHref={true}>
+        <a className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-gray-500 mr-4">
+          FAQ
+        </a>
+      </Link>
     </div>
   </nav>  
   );
