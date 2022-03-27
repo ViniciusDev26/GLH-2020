@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const DL = styled.dl`
   margin-left: 1rem;
-  color: blue;
+  color: #C63337;
 
   dt {
     margin-top: 1rem;
@@ -11,7 +11,8 @@ export const DL = styled.dl`
   dd {
     margin-left: 1rem;
     max-width: 46rem;
-  
+    color: black;
+    
     &::before {
       content: 'R: ';
     }
