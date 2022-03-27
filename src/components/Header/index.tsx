@@ -12,7 +12,7 @@ function Header() {
     setCloseHeader(state => !state);
   }
 
-  return !isLoginPath && (
+  return isLoginPath ? <></> : (
     <nav className="flex items-center justify-between flex-wrap bg-black p-6">
     <Link href="/" passHref>
       <div className="flex items-center flex-shrink-0 text-white mr-6">
