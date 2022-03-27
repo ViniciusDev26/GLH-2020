@@ -3,7 +3,7 @@ import type { NextPage } from "next";
 export const getServerSideProps = (_req: any, res: any) => {
   return {
     redirect: {
-      destination: '/contracts'
+      destination: '/login'
     }
   }
 }

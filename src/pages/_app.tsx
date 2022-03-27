@@ -6,7 +6,7 @@ import { FaWhatsapp } from 'react-icons/fa'
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <>
+    <div className="flex flex-row h-screen">
       <Header />
       <Component {...pageProps} />
 
@@ -19,7 +19,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           />
         </div>
       </Link>
-    </>
+    </div>
   )
 }
 

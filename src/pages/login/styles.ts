@@ -6,10 +6,11 @@ export const StyledContainer = styled.div`
 
   margin: 0 auto;
   margin-top: 15%;
+  text-align: center;
 
   h2 {
     font: bold;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     text-align: center;
   }
 
