@@ -1,6 +1,12 @@
-import { DataGrid, GridColDef, GridValueGetterParams } from '@mui/x-data-grid';
 import type { NextPage } from "next";
-import { api } from "../lib/axios";
+
+export const getServerSideProps = (_req: any, res: any) => {
+  return {
+    redirect: {
+      destination: '/contracts'
+    }
+  }
+}
 
 const Home: NextPage = () => {
   return (

@@ -14,16 +14,6 @@ const Contracts: NextPage = () => {
   return (
     <>
       <Table columns={columns} rows={rows}/>
-
-      <Link href="https://wa.me/+5585996282906" passHref>
-        <div className="flex justify-end">
-          <FaWhatsapp
-            className="mt-2 mr-2 cursor-pointer"
-            size={46}
-            color="green"
-          />
-        </div>
-      </Link>
     </>
   );
 };

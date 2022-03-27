@@ -10,7 +10,7 @@ function Header() {
 
   return (
     <nav className="flex items-center justify-between flex-wrap bg-black p-6">
-      <Link href="/" passHref={true}>
+      <Link href="/" passHref>
         <div className="flex items-center flex-shrink-0 text-white mr-6">
           <Image 
             src="https://assets.website-files.com/6077c884c3e246204e5f48d8/6077cccf4baced83a073cc5e_GLH-logo-Dark.svg" 
