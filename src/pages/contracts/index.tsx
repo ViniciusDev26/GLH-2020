@@ -1,6 +1,4 @@
 import type { NextPage } from "next";
-import Link from "next/link";
-import { FaWhatsapp } from "react-icons/fa";
 import { Table } from '../../components/table';
 
 const Contracts: NextPage = () => {

@@ -146,6 +146,10 @@ export const Table = ({columns, rows}: TTableProps) => {
               </div>
             </section>
           </main>
+          <footer>
+            <button onClick={() => setOpened(state => !state)}>Recusar</button>
+            <button onClick={() => setOpened(state => !state)}>Aceitar</button>
+          </footer>
         </>
       </StyledDialog>
     </TableContainer>

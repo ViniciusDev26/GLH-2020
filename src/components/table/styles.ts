@@ -40,4 +40,35 @@ export const StyledDialog = styled(Dialog)`
       }
     }
   }
+
+  footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin: 1rem 0;
+
+    button {
+      color: blue;
+      border: 1px solid #CCC;
+      padding: 1rem 2rem;
+ 
+      &:hover {
+        background-color: blue;
+        color: white;
+      }
+
+      &:nth-child(1) {
+        color: red
+      }
+
+      &:nth-child(1):hover {
+        color: white;
+        background-color: red;
+      }
+
+      
+    }
+  }
 `
