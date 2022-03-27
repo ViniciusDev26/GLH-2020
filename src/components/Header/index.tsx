@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link';
 import { useState } from 'react';
 function Header() {
   const [closedHeader, setCloseHeader] = useState(true);
@@ -9,14 +10,17 @@ function Header() {
 
   return (
     <nav className="flex items-center justify-between flex-wrap bg-black p-6">
-      <div className="flex items-center flex-shrink-0 text-white mr-6">
-        <Image 
-          src="https://assets.website-files.com/6077c884c3e246204e5f48d8/6077cccf4baced83a073cc5e_GLH-logo-Dark.svg" 
-          alt="logo" 
-          width={100}
-          height={40}
-        />
-      </div>
+      <Link href="/" passHref={true}>
+        <div className="flex items-center flex-shrink-0 text-white mr-6">
+          <Image 
+            src="https://assets.website-files.com/6077c884c3e246204e5f48d8/6077cccf4baced83a073cc5e_GLH-logo-Dark.svg" 
+            alt="logo"
+            className='cursor-pointer'
+            width={100}
+            height={40}
+          />
+        </div>
+      </Link>
       <div className="block lg:hidden">
         <button 
           onClick={showHeaderOptions}
@@ -26,15 +30,16 @@ function Header() {
       </div>
       <div className={`w-full block flex-grow lg:flex lg:items-center lg:w-auto ${closedHeader ? 'hidden' : ''}`}>
         <div className="text-sm lg:flex-grow">
-          <a href="#responsive-header" className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-gray-500 mr-4">
-            Financeiro
-          </a>
-          <a href="#responsive-header" className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-gray-500 mr-4">
-            Gestão de contratos
-          </a>
-          <a href="#responsive-header" className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-gray-500 mr-4">
-            Integração
-          </a>
+          <Link href="/contracts" passHref={true}>
+            <a className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-gray-500 mr-4">
+              Contratos
+            </a>
+          </Link>
+          <Link href="/providers" passHref={true}>
+            <a className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-gray-500 mr-4">
+              Financeiro
+            </a>
+          </Link>
         </div>
         <div>
           {/* <a href="#" className="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0">Download</a> */}

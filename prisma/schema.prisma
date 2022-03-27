@@ -17,8 +17,10 @@ model Provider {
   email     String @unique
   phone     String
   addressId String @unique
+  representativeId String @unique
 
   address Address @relation(fields: [addressId], references: [id])
+  representative Representative @relation(fields: [representativeId], references: [id])
   @@map("providers")
 }
 
@@ -28,6 +30,11 @@ model Representative {
   cpf   String @unique
   rg    String @unique
   email String @unique
+  phone String
+  addressId String @unique
+
+  Provider Provider?
+  address Address @relation(fields: [addressId], references: [id])
 
   @@map("representative")
 }
@@ -40,6 +47,62 @@ model Address {
   postal_code String
 
   Provider Provider?
-  
+  Representative Representative?
+
   @@map("address")
+}
+
+model DeliveryTerm {
+  id String @id @default(uuid())
+
+  total DateTime
+  start DateTime
+  end DateTime
+  frequency Int
+
+  Contract Contract?
+
+  @@map("delivery_term")
+}
+
+model Payment {
+  id String @id @default(uuid())
+  frequency Int
+  price Float
+  payment_method payment_methods
+
+  bank Int
+  agency String
+  account String
+  PIX String? 
+
+  Contract Contract?
+
+  @@map("payment")
+}
+
+model Contract {
+  id String @id @default(uuid())
+  object String
+  delivery_termId String @unique
+  paymentId String @unique
+
+  readjustment_form readjustment_forms
+  forum String
+  signature_date DateTime
+  validity DateTime
+
+  delivery_term DeliveryTerm @relation(fields: [delivery_termId], references: [id])
+  payment Payment @relation(fields: [paymentId], references: [id])
+}
+
+enum payment_methods {
+  PIX
+  CREDIT
+  DEBIT
+  CASH
+}
+
+enum readjustment_forms {
+  IPCA
 }
