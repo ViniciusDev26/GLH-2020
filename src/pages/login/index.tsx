@@ -16,11 +16,10 @@ const Login = () => {
         height={45}
         layout="fixed"
       />
-      <h2>Login</h2>
       <div>
         <input type="email" placeholder='E-mail'/>
-        <input type="password" placeholder='Password'/>
-        <button onClick={() => router.push('/contracts')}>Logar</button>
+        <input type="password" placeholder='Senha'/>
+        <button onClick={() => router.push('/contracts')}>Entrar</button>
       </div>
     </StyledContainer>
   )

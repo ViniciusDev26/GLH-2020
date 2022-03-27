@@ -4,7 +4,7 @@ export const StyledContainer = styled.div`
   height: 100vh;
   width: 50vw;
 
-  max-width: 35%;
+  max-width: 25%;
   margin: 0 auto;
   margin-top: 15%;
   text-align: center;
@@ -20,6 +20,11 @@ export const StyledContainer = styled.div`
     flex-direction: column;
   
     input {
+      &:nth-child(2){
+        margin-top: 1rem;
+      }
+
+      border-radius: .4rem;
       border: 1px solid #ccc;
       padding: .3rem .5rem;
       line-height: 1.5rem;
