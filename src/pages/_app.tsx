@@ -11,7 +11,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Component {...pageProps} />
 
       <Link href="https://wa.me/+5585996282955" passHref>
-        <div className="flex justify-end">
+        <div className="flex justify-end" style={{position: "absolute", bottom: 5, right: 5}}>
           <FaWhatsapp
             className="mt-2 mr-2 cursor-pointer"
             size={46}

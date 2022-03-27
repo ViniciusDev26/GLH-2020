@@ -2,8 +2,12 @@ import { Dialog } from "@mui/material";
 import styled from "styled-components";
 
 export const StyledDialog = styled(Dialog)`
-  .MuiPaper-elevation {
+  [role="dialog"] {
     width: 100%;
+    height: 100%;
+    background-color: #000;
+    border-radius: 2rem;
+    max-height: 80%;
   }
 
   header {
@@ -12,9 +16,24 @@ export const StyledDialog = styled(Dialog)`
     align-items: center;
     justify-content: space-between;
     padding: 1rem 1.5rem;
-
+    
     h1 {
       font-size: 1.5rem;
+      color: white;
+    }
+
+    .modalHeader::before {
+      content: '';
+      border-radius: 2rem;
+      display: inline-block;
+      margin-right: 1rem;
+      height: 20px;
+      width: 20px;
+      background-color: #00c2cb;
+    }
+
+    svg {
+      color: white;
     }
 
     border-bottom: 1px solid #000;
@@ -26,17 +45,27 @@ export const StyledDialog = styled(Dialog)`
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    padding: 1rem;
 
     section {
+      background-color: white;
       display: flex;
       flex-direction: column;
-      
-      gap: 1rem;
+      justify-content: space-between;
+      border-radius: 1rem;
+      padding: .3rem;
+      height: 100%;
+
+      gap: .5rem;
 
       div {
         display: flex;
         flex-direction: row;
         gap: .5rem;
+
+        label {
+          font: bold;
+        }
       }
     }
   }
@@ -50,8 +79,10 @@ export const StyledDialog = styled(Dialog)`
     margin: 1rem 0;
 
     button {
+      background-color: #CCC;
       color: blue;
       border: 1px solid #CCC;
+      border-radius: 2rem;
       padding: 1rem 2rem;
  
       &:hover {
@@ -67,8 +98,6 @@ export const StyledDialog = styled(Dialog)`
         color: white;
         background-color: red;
       }
-
-      
     }
   }
 `

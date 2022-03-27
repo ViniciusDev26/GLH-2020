@@ -1,5 +1,4 @@
 import { TableContainer, Table as TableMui, TableHead, TableRow, TableCell, TableBody, Dialog } from "@mui/material"
-import Link from "next/link"
 import { useState } from "react"
 import { FaEye, FaWhatsapp } from "react-icons/fa"
 import { MdCloseFullscreen } from "react-icons/md"
@@ -55,7 +54,7 @@ export const Table = ({columns, rows}: TTableProps) => {
       <StyledDialog open={opened}>
         <>
           <header>
-            <h1>ID: 0001 - Contrato de fornecimento de XY</h1>
+            <h1 className="modalHeader">ID: 0001 - Contrato de fornecimento de XY</h1>
             <MdCloseFullscreen onClick={() => setOpened(state => !state)} />
           </header>
           <main className="container">
